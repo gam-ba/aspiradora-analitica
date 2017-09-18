@@ -1,0 +1,3 @@
+signatures_df = pd.DataFrame.from_dict(signatures, orient='columns', dtype=None)
+del signatures_df['num_comments']
+signatures_df.to_csv('output_file_name.csv', sep='\t', encoding='utf-8')
