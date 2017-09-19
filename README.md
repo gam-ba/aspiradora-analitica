@@ -1,2 +1,2 @@
 # aspiradora-analitica
-Plataforma de scrapping y análisis automático de peticiones de change.org (pero adaptable!)
+Proyecto de scrapping y análisis automático de peticiones de change.org (pero adaptable!)
