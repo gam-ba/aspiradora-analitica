@@ -1,6 +1,5 @@
 import json
 import requests
-import pandas as pd
 
 def get_comments(signatures, petition_id):
     '''
