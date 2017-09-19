@@ -21,20 +21,20 @@ def get_comments(signatures, petition_id):
     likes = []
     date = []    
     while not last_page:
-        comments_url = "https://www.change.org/api-proxy/-/petitions/%s/comments?limit=10&offset=%d&order_by=voting_score" % (str(petition_id), idx)
+        comments_url = 'https://www.change.org/api-proxy/-/petitions/%s/comments?limit=10&offset=%d&order_by=voting_score' % (str(petition_id), idx)
         comments_json = json.loads(requests.get(comments_url).content)
-        if "items" in comments_json:
-            n_items += len(comments_json["items"])
-            for item in comments_json["items"]:
-                comments.append(item["comment"])
-                likes.append(item["likes"])
-                date.append(item["created_at"])
-            last_page = comments_json["last_page"]
+        if 'items' in comments_json:
+            n_items += len(comments_json['items'])
+            for item in comments_json['items']:
+                comments.append(item['comment'])
+                likes.append(item['likes'])
+                date.append(item['created_at'])
+            last_page = comments_json['last_page']
             idx += 10
-    signatures["num_comments"] = n_items
-    signatures["comments_list"] = comments
-    signatures["likes"] = likes
-    signatures["date"] = date
+    signatures['num_comments'] = n_items
+    signatures['comments_list'] = comments
+    signatures['likes'] = likes
+    signatures['date'] = date
 
     return signatures
     
