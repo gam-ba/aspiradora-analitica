@@ -42,4 +42,4 @@ def get_comments(signatures, petition_id):
 signatures = {}
 petition_id = 0
 
-get_comments(signatures, str(petition_id))
+get_comments(signatures, petition_id)
