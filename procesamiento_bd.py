@@ -1,12 +1,12 @@
-import pandas as pd
 import datetime as dt
 import numpy as np
+import pandas as pd
 import re
 from string import punctuation
 
 df = pd.read_csv('nombre_de_archivo', sep='\t', encoding='utf-8')
 
-df['time'] = df['date'].str.extract('(\d\d:\d\d:\d\d)', expand=True)                                            # Limpia los datos de fecha y hora (porque la api los devuelve sucios).
+df['time'] = df['date'].str.extract('(\d\d:\d\d:\d\d)', expand=True)                                            # Limpia los datos de fecha y hora con regex (porque la api los devuelve sucios).
 df['date'] = df['date'].str.extract('(\d\d\d\d-\d\d-\d\d)', expand=True)
 df['date'] = pd.to_datetime(df.date).dt.date
 df['time'] = pd.to_datetime(df.time).dt.time
