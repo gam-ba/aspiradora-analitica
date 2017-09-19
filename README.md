@@ -10,4 +10,4 @@ Guardar el diccionario en un archivo CSV para seguir trabajando.
 #### Paso 2: procesamiento_bd.py
 Limpiar la base de datos y generar información relevante, siempre con pandas.
 #### Paso 3: procesamiento_txt.py (en proceso)
-Analizar el texto de los comentarios a partir de un serie de modelos de LSI y LSA, con Gensim.
+Analizar el texto de los comentarios a partir de una serie de modelos de LSA y LSI, con Gensim.
