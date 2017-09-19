@@ -17,3 +17,5 @@ df['comments_clean'] = df.comments_list.apply(lambda x: ''.join(c for c in x if 
 
 df = df[['date', 'time', 'weeks_cat', 'comments_list', 'comments_clean', 'likes', 'word_count']]
 df = df.sort_values(by=['date','time'], ascending=[True, True]).reset_index()                                   # Ordena cronológicamente la BD, a nivel de segundos.
+
+df.to_csv('nombre_de_archivo_procesado', sep='\t', encoding='utf-8', index=False)                               # Se guarda en un CSV para retomar en la siguiente etapa.
